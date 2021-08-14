@@ -7,7 +7,7 @@ clear
 # if [[ "$IP" = "" ]]; then
 IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 # fi
-
+apt-get -y update
 apt-get -y install squid3
 cat > /etc/squid/squid.conf <<END
 http_port 8080
